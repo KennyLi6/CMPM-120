@@ -1,0 +1,131 @@
+{
+    
+    "Title": "Escape the Dungeon",
+    "Credits": "StoryGraphTool created by Adam Smith (amsmith@ucsc.edu). Help from Hung Nguyen.",
+    "InitialLocation": "Exit Room",
+    "Locations": {
+        "Exit Room": {
+            "Body": "A room with a table in the corner and a crack in the wall. Maybe you could break through the wall with something",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "room-1"
+                },
+                {
+                    "Text": "East",
+                    "Target": "room-2"
+                },
+                {
+                    "Text": "Table",
+                    "Target": "Crafting Table"
+                }
+            ],
+            "Locked_Choices": [
+                {
+                    "Text": "Crack",
+                    "Condition" : "pickaxe",
+                    "Target" : "Beyond"
+                }
+            ]
+        },
+        "room-1": {
+            "Body": "A room similar to the rest. There are sticks here.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Exit Room"
+                },
+                {
+                    "Text": "South",
+                    "Target": "room-3"
+                },
+                {
+                    "Text": "Pick Up Stick",
+                    "Target": "room-1"
+                }
+            ],
+            "Locked_Choices": [
+
+            ]
+        },
+        "room-2": {
+            "Body": "A room similar to the rest. There are rocks here.",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "Exit Room"
+                },
+                {
+                    "Text": "South",
+                    "Target": "room-4"
+                },
+                {
+                    "Text": "Pick Up Rock",
+                    "Target": "room-2"
+                }
+            ],
+            "Locked_Choices": [
+                
+            ]
+        },
+        "room-3": {
+            "Body": "A room similar to the rest. There are rocks here.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "room-1"
+                },
+                {
+                    "Text": "Pick Up Rock",
+                    "Target": "room-3"
+                }
+            ],
+            "Locked_Choices": [
+                
+            ]
+        },
+        "room-4": {
+            "Body": "A room that has a lot of rocks and sticks.",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "room-1"
+                },
+                {
+                    "Text": "North",
+                    "Target": "room-2"
+                },
+                {
+                    "Text": "Pick Up Rock",
+                    "Target": "room-4"
+                },
+                {
+                    "Text": "Pick Up Stick",
+                    "Target": "room-4"
+                }
+            ],
+            "Locked_Choices": [
+                
+            ]
+        },
+        "Crafting Table": {
+            "Body": "You're looking at the workbench. Maybe you can make something",
+            "Choices": [
+                {
+                    "Text": "Back to Room",
+                    "Target": "Exit Room"
+                },
+                {
+                    "Text": "Make Pickaxe",
+                    "Target": "Crafting Table"
+                }
+            ],
+            "Locked_Choices": [
+                
+            ]
+        },
+        "Beyond": {
+            "Body": "You've finally escaped the dungeon."
+        }
+    }
+}
