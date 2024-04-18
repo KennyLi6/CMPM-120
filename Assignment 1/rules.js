@@ -66,10 +66,10 @@ class Table extends Location {
                 rocks -= 3;
                 
                 this.engine.show("&gt; "+"Pickaxe made!");
-                this.engine.gotoScene(Table, "Crafting Table");
+                this.engine.gotoScene(Table, choice.Target);
             } else {
                 this.engine.show("&gt; "+"You do not have enough material to make a pickaxe.")
-                this.engine.gotoScene(Table, "Crafting Table");
+                this.engine.gotoScene(Table, choice.Target);
             }
         } else {
             this.engine.gotoScene(Location, this.engine.storyData.InitialLocation);
